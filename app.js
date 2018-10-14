@@ -17,6 +17,10 @@ app.get('/request.js',
     res.sendFile(path.join(__dirname + '/request.js'));
 });
 
+app.get('/style.css',
+    function(req,res){
+        res.sendFile(path.join(__dirname + '/style.css'));
+    });
 
 //This line should expose the website regularly!
 // app.use(express.static('./ETHUofTFrontend/test_site1'));
