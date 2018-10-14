@@ -10,7 +10,12 @@ function hello ()
     const url = "https://jsonplaceholder.typicode.com/todos/1";
     fetch(url).
     then(data => data.json()). //transform to json first
-        then(json => console.log(JSON.stringify(json)));  //essentially, we are specifying a pipeline, or string of transforms to occur
+        then(json =>
+
+
+        console.log(JSON.stringify(json))
+
+    );  //essentially, we are specifying a pipeline, or string of transforms to occur
 
 
 
@@ -18,5 +23,11 @@ function hello ()
 //    in web, theres multiple ways of getting at something: either via a new page, or via an ajax non-reloading request
 //    jqueyr is essentially the standard library of JS!!
 
+
+}
+
+function issueHTTPRequest()
+{
+    console.log("placeholder");
 
 }
