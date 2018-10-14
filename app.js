@@ -16,6 +16,7 @@ app.get("/", function (request, response)
 {
     // response.send("testing the express");
     response.sendFile(path.join(__dirname + '/index.html'));
+    console.log("some new out");
 
 });
 
