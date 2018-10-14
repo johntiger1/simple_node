@@ -9,6 +9,15 @@ app.get("/cool", function (request, response) {
     response.send("testing the express");
 });
 
+
+//This is one approach, but what if we want to hide the contents of the javascript call? Well then, you would need to
+//put it on the server side. As always, any script files linked to the client are viewable by the client (they are sent wit the index file!)
+app.get('/request.js',
+    function(req,res){
+    res.sendFile(path.join(__dirname + '/request.js'));
+});
+
+
 //This line should expose the website regularly!
 // app.use(express.static('./ETHUofTFrontend/test_site1'));
 //AN alternate approach is res.sendFIle()
