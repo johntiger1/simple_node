@@ -1,4 +1,13 @@
 
+//also recall all the npm and package.json stuff!!
+let express = require('express');
+let app = express();
+
+
+app.get("/cool", function (request, respose) {
+
+    respose.send("testing the express");
+});
 
 
 //recall making a node server is pretty simple,
@@ -34,6 +43,8 @@ console.log("server started");
 //right, it is all about making endpoints available from the node js side, then requesting these or navigating to the endpoints
 //via simple html
 //i mean once we have the node backing, then we can essentially execute system calls and the like...
+
+app.listen(3000, () => "the variable app, bound to require('express') is serving these requests");
 
 
 
