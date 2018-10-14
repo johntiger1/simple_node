@@ -2,13 +2,22 @@
 //also recall all the npm and package.json stuff!!
 let express = require('express');
 let app = express();
+let path = require('path');
 
+app.get("/cool", function (request, response) {
 
-app.get("/cool", function (request, respose) {
-
-    respose.send("testing the express");
+    response.send("testing the express");
 });
 
+//This line should expose the website regularly!
+// app.use(express.static('./ETHUofTFrontend/test_site1'));
+//AN alternate approach is res.sendFIle()
+app.get("/", function (request, response)
+{
+    // response.send("testing the express");
+    response.sendFile(path.join(__dirname + '/index.html'));
+
+});
 
 //recall making a node server is pretty simple,
 
