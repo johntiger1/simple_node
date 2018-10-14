@@ -42,6 +42,8 @@ app.get("/", function (request, response)
 "use strict";
 
 
+
+
 // We can assign everything to a variable ; this is a named function expression!
 // and we don't have hoisting on this variable!
 var x  = function()
